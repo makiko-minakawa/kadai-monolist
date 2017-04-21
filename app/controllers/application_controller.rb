@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     name = result['itemName']
     url = result.url
     image_url = result['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128', '')
-    
+
     return {
       code: code,
       name: name,
