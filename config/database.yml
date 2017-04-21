@@ -48,9 +48,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  adapter :postgresql
-  encoding :unicode
+  adapter: postgresql
+  encoding: unicode
   pool: 5
   database: monolist_production
   username: monolist
