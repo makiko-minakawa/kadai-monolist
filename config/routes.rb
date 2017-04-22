@@ -9,5 +9,13 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create]
   
   resources :items, only: [:show, :new]
-  resources :ownerships, only: [:create, :destroy]
+  resources :ownerships, only: [:create, :destroy] do
+    member do
+      get :wants
+      get :haves
+    end
+    collection do
+      get :search
+    end
+  end
 end
