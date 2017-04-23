@@ -18,4 +18,8 @@ Rails.application.routes.draw do
       get :search
     end
   end
+  
+  get 'rankings/want', to: 'rankings#want'
+  get 'rankings/have', to: 'rankings#have'
+  
 end
